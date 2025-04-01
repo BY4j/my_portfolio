@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: MHfont;
+  src: url("/fonts/Monsterhunter.ttf");
+}
+
+@font-face {
+  font-family: VTCGoblin;
+  src: url("/fonts/VTCGoblinHand.ttf");
+}
+
+@font-face {
+  font-family: Oswald;
+  src: url("/fonts/Oswald-Regular.ttf");
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Oswald;
+}
+
+h2 {
+  font-size: 4em;
+  font-family: MHfont;
+}
+
+h3 {
+  font-size: 2em;
+  font-family: VTCGoblin;
+}
+
+p {
+  font-size: 1.2em;
+  letter-spacing: 0.08em;
+  line-height: 2em;
+}
+
+span {
+  border-bottom: 0.2em solid #a68458;
+  padding-bottom: 0.2em;
+}
+
+a {
+  text-decoration: none;
+}
+
+#author {
+  font-size: 3em;
+}
