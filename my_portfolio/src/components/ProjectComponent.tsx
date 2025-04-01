@@ -6,6 +6,7 @@ import Page from "./Page";
 
 const projects = [
     {
+        id: 1,
         name: "Connect 4",
         description:
             "Connect 4 was made only using HTML, CSS and JS." +
@@ -16,6 +17,7 @@ const projects = [
         skills: ["html", "css", "JS"]
     },
     {
+        id: 2,
         name: "Tweethunter",
         description: "This the biggest project yet. We were a group of 3 to try and recreate twitter with, well only it's most basic features",
         image: "",
@@ -37,7 +39,7 @@ export default function ProjectComponent() {
             <div className="flex size-[90%] items-start justify-evenly border-4 border-indigo-600">
                 <div className="flex w-[100%] justify-evenly items-center mt-[5em]">
                     {projects.map((project) =>
-                        <div className="flex relative items-center h-[10em] w-[15em] border-4 border-blue-500 hover:border-white cursor-pointer"
+                        <div key={project.id} className="flex relative items-center h-[10em] w-[15em] border-4 border-blue-500 hover:border-white cursor-pointer"
                             onClick={() => {
                                 console.log("test");
                                 setSelectedProject(project);
